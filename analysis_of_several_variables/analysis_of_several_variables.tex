@@ -13,10 +13,96 @@
 \maketitle
 
 \chapter{Topology of Euclidean Space}
-\section{Open and Closed Sets}
-\section{Compactness}
-\section{Connectedness}
 
+\section{Introduction}
+\begin{definition}
+  \[
+    \RR ^{n} = \RR \times \cdots \times \RR = \left\{(x_{1} , x_{2} , \cdots , x_n)| x_{1} ,\cdots,x_n \in \RR \right\}
+  \]
+\end{definition}
+\section{\(\RR ^{n} \) as a Vector Space}
+
+\begin{itemize}
+  \item \(\left<x,y\right> = \sum_{i=1}^{n}  \fa x,y= \RR ^{n} \)
+  \item \(\left\{e_i\right\}_{i=1} ^{n} \) is an orthonormal basis for \(\RR ^{n} \)
+  \item Simplest maps \(\RR^n \to \RR ^{m} \)?
+        \bf{Linear maps}: It sends lines to lines
+\end{itemize}
+\begin{example}
+  Linear map \(f:\RR \to \RR\)
+  \[
+    f(x)= x f(1) \fa x \in \RR
+  \]
+\end{example}
+\begin{corollary}
+  if \(c \in \RR \), then \(x \mapsto cx \) is a liner map
+
+  \(therfore \left\{f:\RR roundback \text{Linear}\right\}\) \iff \(\RR \)
+
+\end{corollary}
+\begin{remark}
+  Let \(l:\RR ^{n}  -> \RR ^{m} \) be a linear map.
+  \[
+    le_j= \sum_{i=1}^{m} a _{ij} e_i \fa j=1,\cdots ,n
+  \]
+  we write \(\left[L\right] _{\left\{e_i\right\}^{n} _{i=1} }^{\left\{e_j}\right\}^{m_{j-1} }= \left(a_{ij}\right)_{m \times n}  \)
+\end{remark}
+\begin{definition}
+  Define distance function \(d:\RR ^n \times \RR ^{n} \to \RR  \ge 0\) by \(d(x,y)=\left||x-y|\right|\)
+\end{definition}
+\begin{definition}[Scalar Product]
+
+  \[
+  \]
+\end{definition}
+\begin{remark}
+  \begin{itemize}
+    \item \(\left|x\right|= \left<x,y\right>^{1/2} \)
+    \item \(<,> \) is liner w.r.t 1st and second slot
+  \end{itemize}
+\end{remark}
+
+\begin{theorem}[Cauchy Schwarz inequality ]
+  \[
+    \fa x,y \in \RR ^{n} , <x,y> \le \left|x\right|\left|y\right|
+  \]
+\end{theorem}
+\begin{proof}
+  \[
+    \begin{aligned}
+      0\le \sum_{i=1}^{n}       \sum_{j=1}^{n} \left(x_iy_j-x_jy_i\right)^{2}
+                     & = 2 \left[ \sum_{}^{} \sum_{ }^{}  x_i ^{2} y_i ^{2} - \sum_{i,j}^{} x_ix_jy_iy_j\right] \\
+                     & =\left[ \left|x\right|^{2} \left|y\right|^{2} - <x,y> ^{2} \right]
+
+      \implies <x,y> & \le \left|x\right|\left|y\right|
+    \end{aligned}
+  \]
+\end{proof}
+\begin{remark}
+  equality occurs if and only if \(x_iy_j=x_jy_i \fa i,j\)
+\end{remark}
+\begin{theorem}
+  Let \(L: \RR ^{n} \to \RR^m \) a linear map. Then \(\exists M > 0 \st \left|Lx\right|\leq M \left|x\right| \fa x \in \RR ^{n} \)
+\end{theorem}
+\begin{proof}
+  As \(x= \sum_{i=1}^{n} x_ie_i,\)
+
+  so \(Lx= \sum_{i=1}^{n} x_i L e_i\)
+  \[
+    \implies \left|Lx\right| = \left|\sum_{i=1}^{n} x_i L e_i \right| \le \sum_{i=1}^{n} \left|x_iLe_i\right|= \sum_{}^{} \left|x_i\right|\left|Le_i\right|\le \left|x\right| \left(\left|Le_i\right|\right)
+  \]
+  \[
+    \left< x,y ^{2} ^{2}  \right>
+  \]
+\end{proof}
+
+\section{Connectedness}
+\[
+  \circlearrowleft
+
+  \norm{e^{e^{e^{e^{e^{e}}}}}}
+  \norm{x ^{2} \frac{x}{e^{e^e^{e^{e^{e^{e^{e^{e^{e^{e^{e  }}}}}}}}}{}}}}
+\]
 \chapter{Differentiation}
 \section{The Derivative as a Linear Map}
 \section{The Chain Rule}

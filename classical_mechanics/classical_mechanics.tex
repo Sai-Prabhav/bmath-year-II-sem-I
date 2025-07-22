@@ -12,15 +12,133 @@
 
 \maketitle
 
+\date{21 Jul 2025}
 \chapter{Introduction}
+\section{Notation}
 
+\[
+  \left(\vec{A} \times  \vec{B}\right)_{i} =\epsilon_{ijk}A_jB_k
+\]
+\[
+  \vec{A}. \vec{B}= \sum_{ij}^{} \delta_{ij} \vec{A}_{i} \vec{B}_{j}
+\]
+
+\[
+  \begin{aligned}
+    \delta_{ij} & = 1 \text{ if } i=j   \\
+                & = 0 \text{ otherwise}
+  \end{aligned}
+\]
+\[
+  \begin{aligned}
+    \epsilon_{ijk} & = 0 \text{ if any 2 of indices are equal}                 \\
+                   & = 1 \text{ if indices are cyclic perm of } (1 2 3 )       \\
+                   & = -1 \text{ if indices are anti-cyclic perm of } (1 2 3 ) \\
+  \end{aligned}
+\]
+
+
+\section{Examples}
+Angular Momentum \( \vec{L} = \vec{\rho} \times \vec{p}\)
+\[
+  L_i = \epsilon_{ijk} \vec{\rho}_{j}\vec{p}_{k}
+\]
+
+\section{Gradient, Divergence and Curl}
+\subsection{Gradient}
+\[
+  f(\vec{\rho})= f(x,y,z)
+\]
+\[
+  \vec{\nabla }f= \frac{\partial{f}}{\partial{x}}  \hat{e}_{x}
+\]
+
+\subsection{divergence}
+$$
+  v_x ( \vec{ \rho}  )=\frac{\partial{v_x}}{\partial{x}}e_x+ \frac{\partial{v_y}}{\partial{y}} \hat{e}_{y} + \frac{\partial{v_z}}{\partial{z}} \hat{e}_{z}
+$$
+\[
+  \vec{\nabla }. \vec{v}\vec{(\rho)}= \left[ \frac{d}{dx}e_x + \frac{d}{dz}e_y + \frac{d}{dz}e_z\right] . \left[v_x \hat{e}_x+ v_y \hat{e}_{y} +v_z \hat{e} _{z} \right]
+\]
+\[
+  = \frac{dv_x}{dx}+\frac{dv_y}{dy}+\frac{dv_z}{dz}
+\]
+\subsection{curl}
+\[
+  \begin{aligned}
+    \left[ \vec{\nabla \times \vec{v}}\right]_{i} & = \epsilon_{ijk} \partial_jv_k                                          \\
+    \left[ \vec{\nabla \times \vec{v}}\right]_{1} & = \epsilon_{1jk} \partial_jv_k                                          \\
+                                                  & = \frac{\partial{v_z}}{\partial{y}} - \frac{\partial{v_y}}{\partial{z}} \\
+  \end{aligned}
+\]
 \chapter{Newtonian Mechanics}
-\section{Newton's Laws of Motion}
-\section{Work and Energy}
+\section{Action - Reaction pair}
+Action reaction forces always act on different bodies.
+Equal in magnitude, opposite but not necessarily along same line.
+\section{Second Law}
 
-\chapter{Lagrangian Mechanics}
-\section{The Principle of Least Action}
-\section{Lagrange's Equations}
+\[\vec{F}=m \vec{a}\]
+\section{Mechanics of a single particle}
+\[
+  \begin{aligned}
+    \vec{v} & = \frac{\partial{\vec{p}}}{\partial{t}}         \\
+    \vec{p} & =m \vec{v}                                      \\
+    \vec{f} & =\frac{\partial \vec{{p}}}{\partial{t}}=\vec{p}
+  \end{aligned}
+\]
+If \(m(t)\equiv m\),
+\[
+  \vec{F}= m \frac{d{\vec{v}}}{d{t}}=ma=m\frac{d^2 \rho}{dt ^{2} }
+\]
+
+
+\[
+  \begin{aligned}
+    \vec{L}    & =\vec{\rho} \times \vec{p} \\
+    \vec{\tau} & =\vec{\rho} \times \vec{F}
+  \end{aligned}
+\]
+By newtons law
+\[
+  \begin{aligned}
+    \vec{\tau} & = \vec{\rho} \times  \frac{d \vec{p}}{dt}   \\
+               & = \vec{\rho} \times \frac{d}{dt}(m \vec{v})
+  \end{aligned}
+\]
+\subsection{Work}
+\[
+  \begin{aligned}
+    W & = \int ^{f} _{i} \vec{F} d \vec{s}                                         \\
+      & = m \int ^{f} _{i} \frac{d \vec{v}}{d t} . \vec{v}~dt                      \\
+      & = \frac{m}{2} \int ^{f} _{i} dt \frac{d}{dt} \left(\vec{v}. \vec{v}\right) \\
+      & = \frac{m}{2}\left(v_f ^{2} - v_i ^{2} \right)
+  \end{aligned}
+\]
+Let \(T=\frac{1}{2}mv ^{2} \) then,
+\[
+  W = \frac{m}{2} \left(v_f ^{2} - v_i ^{2} \right)= T_f - T_f
+\]
+\subsection*{Conservative Forces}
+\(\vec{F}\) is a conserved force if
+\[
+  \oint _{ \cal{C} } \vec{F}. \vec{ds}= 0
+\]
+then we can define the potential \(V\) as
+\[\vec{F}= - \vec{ \nabla }V.\]
+\[
+  \oint _{\cal C} \vec{F}. \vec{ds} = - \oint _{ \cal C} \vec{\nabla }V. \vec{ds}=0
+\]
+\subsection*{Conservation Law}
+\begin{itemize}
+  \item If \(\vec{F}=0, \frac{\vec{dp}}{dt}=0 \) (liner momentum is conserved)
+
+  \item If \(\vec{\tau}=0, \frac{\vec{L}}{dt}=0 \) (angular momentum is conserved)
+
+  \item If \(W=0, \frac{\vec{T}}{dt}=0 \) (T is conserved)
+
+
+\end{itemize}
+
 
 \chapter{Hamiltonian Mechanics}
 \section{Hamilton's Equations}
