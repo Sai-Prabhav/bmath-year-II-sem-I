@@ -12,7 +12,129 @@
 
 \maketitle
 
-\chapter{Introduction to Groups}
+
+\chapter{Introduction to Sets}
+Set Theory, there is a symbol \('\epsilon'\) called belongs to. A statement in set theory can look like this \(x \epsilon y\).
+
+\begin{axiom}
+  There exist a set with no elements.
+\end{axiom}
+\begin{axiom}
+  Two sets with same elements are equal
+\end{axiom}
+\begin{definition}
+  \(A  \subseteq B\) if all elements of \(A\) are in \(B\)
+\end{definition}
+
+\begin{axiom}
+  if \(X,Y\) are sets then \(\left\{ x,y  \right\} \)
+\end{axiom}
+\begin{axiom}
+  \(A\) is a set then \( union  A = \left\{x \in y | y \in A \right\} \)
+\end{axiom}
+\begin{axiom}[Power set]
+  Given a set A there exist \(P(A)= \left\{ B \mid \fa B \subseteq A  \right\} \)
+\end{axiom}
+\begin{axiom}[Infinite axiom]
+  There exist I \( \phi \in I \and \fa y \in I (P(y) \in I)\)
+\end{axiom}
+\begin{axiom}
+  A, B are sets then \(A \times B = \{(x,y) \mid x \in A , y \in B \}\) is a set.
+
+\end{axiom}
+\begin{definition}[Relation]
+  Relation R on a set ea is a subset \(R \subseteq A \times A\)
+  \[
+    (x,y) \in R \then x R y
+  \]
+\end{definition}
+
+
+\begin{axiom}[Axiom of choice]\label{axi:choice}
+  Let A be a collection of non empty disjoint sets then there exist a set C consisting of exactly one element from each set in A.
+\end{axiom}
+\begin{definition}
+  A relation R is called reflexive if \(xRx \fa x \in A\).
+
+  A relation R is called symmetric if \(xRy \then yRx\).
+
+  A relation R is called anti-symmetric if \(xRy , yRy \then y=x\).
+
+  A relation R is called transitive if \(xRy, yRz \then xRz \).
+
+\end{definition}
+\begin{definition}[Partial order]
+  A partial order on set \(A\) is a reflexive transitive anti-symmetric relation.
+\end{definition}
+
+\begin{definition}[Total order]
+  Total order R on a set A is a partial order \(\st \fa x,y \in A\) either \(xRy \text{ or } yRx \)
+\end{definition}
+
+\begin{definition}[Minimal element]
+  A total order on a set A is called a well ordered if given any non empty subset B of A.
+\end{definition}
+
+
+\begin{theorem}[Well-ordering Principle]
+  Every set can be well ordered. (It is equvivalent to \autoref{axi:choice}  )
+\end{theorem}
+
+\begin{lemma}[Zorn's Lemma]
+  Let \(A\) be a set and \( \le \) be a partial order on \(A \st \)
+  every chain in \(A\) has an upper bound in \(A\) then \(A \) has a maximal element.
+\end{lemma}
+\begin{definition}[Chain]
+  A chain in \(A\) is a subset which is a totally ordered with respect to \(<\)
+\end{definition}
+\begin{definition}[Upper Bound]
+  Let \(C \subseteq A \). \(x \in A \) is an upper bound of \(C\) if \(\fa y \in C y < x\).
+\end{definition}
+\begin{definition}[Maximal element]
+  \(x \in A\) is called a maximal element if \( \fa y \in A x<y  \implies x=y\)
+\end{definition}
+\begin{theorem}
+  TFAE
+  \begin{itemize}
+    \item Axiom of choice
+    \item Well- ordering principle
+    \item Zorin's lemma
+  \end{itemize}
+\end{theorem}
+
+\begin{definition}
+  A relation R is called an equivalence relation if it is reflexive ,symmetric and transitive.
+\end{definition}
+\begin{definition}[Equivalence class]
+  Let \(x \in A\) then \([x]= \left\{ yRx \mid y \in A   \right\} \subseteq \) called the equivalence class of x.
+\end{definition}
+\begin{definition}
+  \(\bigcup_{x \in A}[x]= A \) and for \(x,y \in A \ [x] \cap [y] = \phi  \text{ or } [x]=[y]\). That is we get a partition of A.
+\end{definition}
+\begin{axiom}
+  I be an indexing set. Then \( \times _{i \in I}A_i = \left\{ f: I \to UA_i \mid \st f(i) \in A_i \right\}    \)
+\end{axiom}
+\begin{definition}[Principle of Induction]
+  let \(S(n), n \in \NN \) be statements. Suppose \(S(1  )\) is true and \(S(n)  \implies S(n+1) \then S(n) \) is true for all \(n\).
+\end{definition}
+\begin{definition}[Transfinite Induction]
+  Let I be a well ordered set and \(S(i)\) be a statement for \(\fa i \in I\). Suppose \(s(j) \fa j < i  \implies s(i)\) then \(S(i)\) is true \(\fa i \in I\)
+\end{definition}
+
+\begin{definition}[Group]
+  A group is a triple \((G,.,e)\) where G is a set, \(.\) is a binary operator on G and \(e \in G\) satisfying the following axioms.
+  \begin{itemize}
+    \item for \(a,b,c \in G  (a \cdot b).c = a\cdot(b\cdot c)\).
+    \item \(a \cdot e =  e \cdot a = a \fa a \in G\).
+    \item \(\fa a \in G \ \exists \ b \in G \st a \cdot b = b \cdot a= e \).
+  \end{itemize}
+
+\end{definition}
+
+\begin{definition}
+  \(G, \cdot , e \) is called abelian if \(\fa a,b \in G a \cdot b = b \cdot a\)
+\end{definition}
+
 \section{Binary Operations}
 \section{Groups and Examples}
 \section{Elementary Properties of Groups}
@@ -31,6 +153,9 @@
 \section{Group Actions and Permutation Representations}
 \section{Orbits and Stabilizers}
 \section{The Class Equation}
+
+
+
 
 \printindex
 
